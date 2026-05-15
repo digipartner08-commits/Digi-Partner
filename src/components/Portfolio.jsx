@@ -5,8 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 // OM
 import om1 from "../assets/clients/NITYAANΤΑ/1.jpeg";
-import om2 from "../assets/clients/om/6.jpg";
-import om3 from "../assets/clients/om/1.jpg";
+import om2 from "../assets/clients/OM/6.jpg";
+import om3 from "../assets/clients/OM/1.jpg";
 
 // CYGNI
 import cygni1 from "../assets/clients/Cygni-Realty/2.jpeg";
@@ -59,7 +59,7 @@ export default function Portfolio() {
   const row3 = [om3, pj1, akshay3, cygni1, rama2, cygni3, jtk2];
 
   return (
-    <section className="pf-section" ref={ref}id="portfolio">
+    <section className="pf-section" ref={ref}id="">
       {/* 🔥 HEADER */}
       <div className="pf-header">
         <h2 className="pf-title">
