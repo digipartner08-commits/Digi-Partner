@@ -69,8 +69,12 @@ export default function Clients() {
   return (
     <section className="clients-section">
       <div className="container">
-        <h2 className="title">Trusted By Brands</h2>
-        <p className="subtitle">Cinematic CapCut transition wall</p>
+       <h2 className="title">
+  Trusted By <span className="text-orange-500">Brands</span>
+</h2>
+       <p className="subtitle">
+  Powering growth for modern brands
+</p>
 
         <div className="grid">
           {items.map((logo, i) => (

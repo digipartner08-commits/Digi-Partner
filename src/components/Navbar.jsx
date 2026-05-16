@@ -129,7 +129,7 @@ const Navbar = () => {
           {/* CTA */}
           <button
             onClick={() => handleClick("contact")}
-            className="hidden md:block px-5 py-2 bg-orange-500 text-black rounded-full font-semibold hover:scale-105 transition duration-300"
+            className="hidden md:block px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:scale-105 transition duration-300"
           >
             Let's Talk
           </button>

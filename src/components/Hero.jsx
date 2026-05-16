@@ -91,17 +91,23 @@ function Hero() {
         <p className="hero-kicker">DIGITAL GROWTH STUDIO</p>
 
         <h1 className="hero-title">
-          We Build Brands<br />
-          That Scale Fast
+          Results that speaks <br />
+          for themselves
         </h1>
 
         <p className="hero-subtitle">
-          Performance marketing. Branding. Systems that convert attention into revenue.
+          Performance marketing. Branding. Systems that convert attention into
+          revenue.
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">Start Growth</button>
-          <button className="btn-secondary">View Work</button>
+          <a href="#contact" className="btn-primary">
+            Start Growth
+          </a>
+
+          <a href="#portfolio" className="btn-secondary">
+            View Work
+          </a>
         </div>
       </motion.div>
     </section>

@@ -59,7 +59,7 @@ export default function Portfolio() {
   const row3 = [om3, pj1, akshay3, cygni1, rama2, cygni3, jtk2];
 
   return (
-    <section className="pf-section" ref={ref}id="">
+    <section className="pf-section" ref={ref} id="portfolio">
       {/* 🔥 HEADER */}
       <div className="pf-header">
         <h2 className="pf-title">
