@@ -14,6 +14,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 /* ================= GLOBAL GLOW ================= */
 body::before {
@@ -1445,33 +1449,39 @@ canvas {
   }
 }
 
-@media (max-width: 768px) {
-  /* MOBILE ONLY FIX */
+/* MOBILE FIX */
 @media (max-width: 768px) {
 
   .clients-section .grid {
-    grid-template-columns: repeat(4, 1fr) !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
 
-    /* ONLY GAP FIX */
-    gap: 6px !important;
-
-    /* REMOVE BIG ROWS */
     grid-template-rows: unset !important;
-    grid-auto-rows: 72px !important;
+    grid-auto-rows: 90px !important;
   }
 
   .clients-section .card {
-    height: 72px !important;
-    position: relative;
+    width: 100% !important;
+    height: 90px !important;
   }
 
   .clients-section .card img {
-    position: absolute;
-    width: 65%;
-    height: 65%;
+    width: 60% !important;
+    height: 60% !important;
     object-fit: contain;
   }
 
 }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

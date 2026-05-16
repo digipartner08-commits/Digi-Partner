@@ -40,6 +40,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -67,24 +68,24 @@ const Navbar = () => {
 
       {/* HEADER */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 overflow-hidden ${
           scrolled
             ? "bg-black/60 backdrop-blur-xl border-b border-white/10"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
+        <div className="w-full max-w-7xl mx-auto px-3 md:px-6 py-3 md:py-4 flex items-center justify-between">
 
           {/* LOGO */}
           <div
             onClick={() => handleClick("home")}
-            className="cursor-pointer group relative"
+            className="cursor-pointer group relative flex-shrink-0"
           >
             <img
               src={logo}
               alt="logo"
               className="
-                w-[75px] md:w-[100px]
+                w-[62px] md:w-[100px]
                 object-contain
                 transition-all duration-500
                 group-hover:scale-110
@@ -126,7 +127,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA */}
+          {/* DESKTOP CTA */}
           <button
             onClick={() => handleClick("contact")}
             className="hidden md:block px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:scale-105 transition duration-300"
@@ -137,7 +138,7 @@ const Navbar = () => {
           {/* MOBILE MENU ICON */}
           <div
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden cursor-pointer z-[1001] p-2"
+            className="md:hidden cursor-pointer z-[1001] p-2 flex-shrink-0"
           >
             <div className="space-y-1">
               <span className="block w-6 h-[2px] bg-white"></span>
@@ -145,6 +146,7 @@ const Navbar = () => {
               <span className="block w-6 h-[2px] bg-white"></span>
             </div>
           </div>
+
         </div>
       </header>
 
@@ -156,16 +158,15 @@ const Navbar = () => {
         />
       )}
 
-      {/* MOBILE MENU (COMPACT FIX) */}
+      {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 right-0 h-full w-[78%] sm:w-[65%] bg-black z-[1000] transform transition-transform duration-500 ${
+        className={`fixed top-0 right-0 h-full w-[75vw] max-w-[320px] bg-black z-[1000] transform transition-transform duration-500 overflow-x-hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
 
-        {/* TOP BAR (NO EXTRA SPACE) */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
-
+        {/* TOP BAR */}
+        <div className="flex items-center justify-end px-4 py-4 border-b border-white/10">
 
           <button
             onClick={() => setMenuOpen(false)}
@@ -173,10 +174,11 @@ const Navbar = () => {
           >
             ✖
           </button>
+
         </div>
 
-        {/* MENU ITEMS (TIGHT) */}
-        <div className="flex flex-col items-center justify-center h-[calc(100%-50px)] space-y-4">
+        {/* MOBILE LINKS */}
+        <div className="flex flex-col items-center justify-center h-[calc(100%-60px)] space-y-5">
 
           {links.map((link) => (
             <button
@@ -200,6 +202,7 @@ const Navbar = () => {
           </button>
 
         </div>
+
       </div>
     </>
   );

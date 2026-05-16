@@ -29,59 +29,40 @@ const services = [
 ];
 
 function AnimatedVisual({ type }) {
-
-  /* MARKETING */
   if (type === "marketing") {
     return (
-      <div className="relative w-28 h-28 mx-auto mb-10">
-
-        {/* Graph Base */}
+      <div className="relative w-16 h-16 md:w-24 md:h-24 mx-auto mb-4 md:mb-8">
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-orange-500/20" />
 
-        {/* Bars */}
-        <div className="absolute bottom-0 left-4 flex items-end gap-3">
-
+        <div className="absolute bottom-0 left-2 flex items-end gap-2">
           <motion.div
-            animate={{ height: [20, 55, 20] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-            }}
-            className="w-3 rounded-full bg-orange-700"
+            animate={{ height: [12, 30, 12] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-2 rounded-full bg-orange-700"
           />
 
           <motion.div
-            animate={{ height: [35, 80, 35] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              delay: 0.2,
-            }}
-            className="w-3 rounded-full bg-orange-500"
+            animate={{ height: [18, 45, 18] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+            className="w-2 rounded-full bg-orange-500"
           />
 
           <motion.div
-            animate={{ height: [50, 105, 50] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              delay: 0.4,
-            }}
-            className="w-3 rounded-full bg-orange-300"
+            animate={{ height: [25, 60, 25] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
+            className="w-2 rounded-full bg-orange-300"
           />
         </div>
 
-        {/* Floating Arrow */}
         <motion.div
           animate={{
-            y: [0, -10, 0],
-            x: [0, 5, 0],
+            y: [0, -5, 0],
           }}
           transition={{
             duration: 2,
             repeat: Infinity,
           }}
-          className="absolute top-2 right-2 text-orange-400 text-3xl"
+          className="absolute top-0 right-0 text-orange-400 text-xl md:text-3xl"
         >
           ↗
         </motion.div>
@@ -89,12 +70,9 @@ function AnimatedVisual({ type }) {
     );
   }
 
-  /* BRANDING */
   if (type === "branding") {
     return (
-      <div className="relative w-28 h-28 mx-auto mb-10 flex items-center justify-center">
-
-        {/* Outer Ring */}
+      <div className="relative w-16 h-16 md:w-24 md:h-24 mx-auto mb-4 md:mb-8 flex items-center justify-center">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{
@@ -102,10 +80,9 @@ function AnimatedVisual({ type }) {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute w-28 h-28 border border-orange-500/30 rounded-full"
+          className="absolute w-16 h-16 md:w-24 md:h-24 border border-orange-500/30 rounded-full"
         />
 
-        {/* Inner Ring */}
         <motion.div
           animate={{ rotate: -360 }}
           transition={{
@@ -113,85 +90,58 @@ function AnimatedVisual({ type }) {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute w-20 h-20 border border-orange-300/40 rounded-full"
+          className="absolute w-10 h-10 md:w-16 md:h-16 border border-orange-300/40 rounded-full"
         />
 
-        {/* Center Glow */}
         <motion.div
           animate={{
-            scale: [1, 1.25, 1],
-            opacity: [0.7, 1, 0.7],
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 2,
             repeat: Infinity,
           }}
-          className="w-8 h-8 rounded-full bg-orange-500 shadow-[0_0_40px_rgba(249,115,22,0.8)]"
+          className="w-5 h-5 md:w-7 md:h-7 rounded-full bg-orange-500"
         />
       </div>
     );
   }
 
-  /* WEB */
   if (type === "web") {
     return (
-      <div className="relative w-32 h-24 mx-auto mb-10">
+      <div className="relative w-20 h-14 md:w-28 md:h-20 mx-auto mb-4 md:mb-8">
+        <div className="absolute inset-0 rounded-xl border border-orange-500/20 bg-black overflow-hidden">
 
-        {/* Laptop */}
-        <div className="absolute inset-0 rounded-2xl border border-orange-500/20 bg-black overflow-hidden shadow-[0_0_50px_rgba(249,115,22,0.15)]">
-
-          {/* Top Code Lines */}
-          <div className="p-4 space-y-2">
-
+          <div className="p-2 space-y-1">
             <motion.div
-              animate={{
-                width: ["20%", "80%", "20%"],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-              }}
-              className="h-2 rounded-full bg-orange-500"
+              animate={{ width: ["20%", "80%", "20%"] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="h-1 rounded-full bg-orange-500"
             />
 
             <motion.div
-              animate={{
-                width: ["70%", "30%", "70%"],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="h-2 rounded-full bg-orange-300"
+              animate={{ width: ["70%", "30%", "70%"] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+              className="h-1 rounded-full bg-orange-300"
             />
 
             <motion.div
-              animate={{
-                width: ["40%", "90%", "40%"],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                delay: 0.5,
-              }}
-              className="h-2 rounded-full bg-orange-400"
+              animate={{ width: ["40%", "90%", "40%"] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              className="h-1 rounded-full bg-orange-400"
             />
           </div>
         </div>
 
-        {/* Laptop Bottom */}
-        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 h-2 bg-orange-500/30 rounded-full" />
+        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-14 h-2 bg-orange-500/30 rounded-full" />
       </div>
     );
   }
 
-  /* CONTENT */
   if (type === "content") {
     return (
-      <div className="relative w-28 h-28 mx-auto mb-10 flex items-center justify-center">
+      <div className="relative w-16 h-16 md:w-24 md:h-24 mx-auto mb-4 md:mb-8 flex items-center justify-center">
 
-        {/* Outer Pulse */}
         <motion.div
           animate={{
             scale: [1, 1.4, 1],
@@ -201,19 +151,18 @@ function AnimatedVisual({ type }) {
             duration: 2,
             repeat: Infinity,
           }}
-          className="absolute w-24 h-24 rounded-full border border-orange-500/30"
+          className="absolute w-14 h-14 md:w-20 md:h-20 rounded-full border border-orange-500/30"
         />
 
-        {/* Main Box */}
         <motion.div
           animate={{
-            y: [0, -6, 0],
+            y: [0, -4, 0],
           }}
           transition={{
             duration: 2,
             repeat: Infinity,
           }}
-          className="w-20 h-20 rounded-[28px] bg-orange-500/10 border border-orange-500/20 flex items-center justify-center backdrop-blur-xl"
+          className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center"
         >
           <motion.div
             animate={{
@@ -223,7 +172,7 @@ function AnimatedVisual({ type }) {
               duration: 1.5,
               repeat: Infinity,
             }}
-            className="text-4xl text-orange-400"
+            className="text-lg md:text-3xl text-orange-400"
           >
             ▶
           </motion.div>
@@ -239,32 +188,28 @@ function Services() {
   return (
     <section
       id="service"
-      className="relative bg-[#050505] text-white py-32 px-6 overflow-hidden"
+      className="relative bg-[#050505] text-white py-20 px-3 overflow-hidden"
     >
 
-      {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-orange-500/10 blur-[200px] rounded-full" />
+      {/* Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/10 blur-[150px] rounded-full" />
 
-      {/* Grid */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:100px_100px]" />
-
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full">
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-14"
         >
 
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-orange-500/20 bg-orange-500/10 mb-7">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/20 bg-orange-500/10 mb-6">
 
             <motion.div
               animate={{
                 scale: [1, 1.4, 1],
-                opacity: [1, 0.4, 1],
               }}
               transition={{
                 duration: 2,
@@ -273,57 +218,66 @@ function Services() {
               className="w-2 h-2 rounded-full bg-orange-500"
             />
 
-            <span className="uppercase tracking-[0.3em] text-xs text-orange-300">
+            <span className="uppercase tracking-[0.2em] text-[10px] sm:text-xs text-orange-300">
               Premium Digital Solutions
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-semibold tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-6xl font-semibold leading-tight">
             Crafted For{" "}
             <span className="text-orange-500">
               Modern Brands
             </span>
           </h2>
 
-          <p className="max-w-3xl mx-auto mt-8 text-white/50 text-lg leading-relaxed">
+          <p className="max-w-2xl mx-auto mt-5 text-white/50 text-sm md:text-lg leading-relaxed">
             We design premium digital experiences that combine creativity,
             strategy, and technology to elevate ambitious brands.
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        {/* FINAL WORKING MOBILE GRID */}
+        <div className="services-grid">
 
           {services.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 70 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.7,
-                delay: i * 0.12,
+                delay: i * 0.1,
               }}
               viewport={{ once: true }}
-              whileHover={{
-                y: -14,
-              }}
-              className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-2xl p-8 min-h-[430px] transition-all duration-500 text-center"
+              className="
+                group relative overflow-hidden
+                rounded-[22px]
+                border border-white/10
+                bg-white/[0.04]
+                backdrop-blur-xl
+
+                p-3 md:p-6
+
+                h-[250px] md:h-[380px]
+
+                text-center
+              "
             >
 
               {/* Hover Glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-b from-orange-500/10 via-transparent to-transparent" />
 
-              {/* Animated Visual */}
+              {/* Visual */}
               <AnimatedVisual type={item.type} />
 
               {/* Text */}
               <div className="relative z-10">
 
-                <h3 className="text-2xl font-semibold mb-5 group-hover:text-orange-400 transition duration-300">
+                <h3 className="text-[14px] md:text-2xl font-semibold mb-2 md:mb-4 leading-tight">
                   {item.title}
                 </h3>
 
-                <p className="text-white/55 leading-relaxed text-[15px]">
+                <p className="text-white/55 text-[11px] md:text-[15px] leading-relaxed">
                   {item.desc}
                 </p>
 
